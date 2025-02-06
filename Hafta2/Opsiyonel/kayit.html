@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAKICIOĞLU OTOMOTİV Anket Formu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #e66465, #9198e5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        #survey-form {
+            background-color: #2a3d55;
+            color: #f0f0f0;
+            width: 100%;
+            max-width: 1000px;
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box;
+            overflow-y: auto;
+            max-height: 80vh;
+        }
+
+        h1#title {
+            text-align: center;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        p#description {
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+        }
+
+        label {
+            display: block;
+            margin: 6px 0 4px;
+            font-size: 0.9rem;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 6px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 6px;
+            outline: none;
+            background-color: #fff;
+            font-size: 0.9rem;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+            font-weight: bold;
+            padding: 8px;
+            font-size: 0.9rem;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .checkbox-group, .radio-group {
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 5px;
+            }
+
+            #survey-form {
+                padding: 10px;
+            }
+
+            input, select, textarea {
+                padding: 5px;
+                font-size: 0.8rem;
+            }
+
+            h1#title {
+                font-size: 1.2rem;
+            }
+
+            p#description {
+                font-size: 0.8rem;
+            }
+
+            input[type="submit"] {
+                padding: 6px;
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <form id="survey-form">
+        <h1 id="title">RAKICIOĞLU OTOMOTİV Anket Formu</h1>
+        <p id="description">Müşteri deneyiminizi geliştirmek için bu formu doldurunuz.</p>
+
+        <label id="name-label" for="name">Tam Adınız</label>
+        <input id="name" type="text" placeholder="Adınız ve soyadınız" required>
+
+        <label id="email-label" for="email">E-posta Adresiniz</label>
+        <input id="email" type="email" placeholder="E-posta adresinizi giriniz" required>
+
+        <label id="number-label" for="number">Yaşınız</label>
+        <input id="number" type="number" placeholder="Yaşınızı giriniz" min="18" max="100" required>
+
+        <label for="dropdown">Cinsiyetiniz</label>
+        <select id="dropdown" required>
+            <option value="">Seçiniz</option>
+            <option value="erkek">Erkek</option>
+            <option value="kadin">Kadın</option>
+            <option value="diger">Diğer</option>
+        </select>
+
+        <div class="radio-group">
+            <p>Bizi nereden duydunuz?</p>
+            <label><input type="radio" name="source" value="instagram" required> Instagram</label>
+            <label><input type="radio" name="source" value="linkedin"> LinkedIn</label>
+        </div>
+
+        <div class="checkbox-group">
+            <label><input type="checkbox" value="terms" required> Hizmet Şartlarını kabul ediyorum</label>
+            <label><input type="checkbox" value="subscribe"> Haber bültenine abone olmak istiyorum</label>
+        </div>
+
+        <label for="suggestions">Önerileriniz</label>
+        <textarea id="suggestions" rows="3" placeholder="Bizimle görüşlerinizi paylaşın"></textarea>
+
+        <input id="submit" type="submit" value="Gönder">
+    </form>
+</body>
+</html>
