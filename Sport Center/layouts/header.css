@@ -1,0 +1,86 @@
+#header {
+    background-color: #355592;
+    color: white;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    height: 80px;
+    line-height: 80px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#hero,
+#classes,
+#trainer,
+#review,
+#contact {
+    position: relative;
+    padding-top: 60px;
+    scroll-margin-top: 150px;
+}
+
+/* Mobile-specific styles for Hamburger menu */
+@media (max-width: 768px) {
+
+    /* Menüyü mobilde göster */
+    #header .nav {
+        display: none;
+        /* Büyük ekranlarda menü gizlensin */
+    }
+
+    /* Hamburger menü */
+    .navbar-toggler {
+        display: block;
+        /* Hamburger menü butonunu göster */
+    }
+
+    .collapse.navbar-collapse {
+        display: block;
+    }
+
+    .nav.flex-column {
+        padding: 20px;
+        display: block;
+    }
+
+    /* Mobile navigation links */
+    .nav-item {
+        margin-bottom: 10px;
+    }
+
+    .nav-link {
+        color: #fff;
+        font-size: 18px;
+        font-weight: 600;
+    }
+}
+
+@media (min-width: 769px) {
+
+    .navbar-toggler {
+        display: none;
+    }
+
+    #header .nav {
+        display: flex;
+        gap: 20px;
+    }
+
+    .nav-item {
+        margin-right: 20px;
+    }
+
+    .nav-link {
+        color: #fff;
+        font-weight: bold;
+    }
+
+    /* Buton */
+    .btn-warning {
+        background-color: #355592;
+        border: 2px solid #355592;
+        padding: 8px 20px;
+    }
+}
